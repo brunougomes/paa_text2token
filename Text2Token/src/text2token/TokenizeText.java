@@ -47,12 +47,11 @@ public class TokenizeText {
         linha = input.readLine();
 
         while (linha != null){
-            tokenizer = new StringTokenizer(linha, " ");
+            tokenizer = new StringTokenizer(linha, " \t");
             while (tokenizer.hasMoreTokens()){
               token = tokenizer.nextToken();
               tokens.add(token);
             }
-            System.out.println();
             linha = input.readLine();
         }
     }
